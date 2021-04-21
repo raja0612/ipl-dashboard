@@ -56,11 +56,11 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
                     .stream()
                     .forEach(each -> {
                       Team team = teamData.get((String)each[0]);
-                      if (team != null) team.setTotalWins((team.getTotalWins() + (long) each[1]));
+                      if (team != null) team.setTotalWins((long) each[1]);
                     });     
                           
        teamData.values().forEach(each -> entityManager.persist(each));   
-       teamData.values().forEach(each  -> System.out.println(each));
+       teamData.values().forEach(System.out::println);
     }
   }
 }
