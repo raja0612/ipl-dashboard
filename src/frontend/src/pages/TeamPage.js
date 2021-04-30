@@ -22,7 +22,7 @@ import { MatchSmallCard } from '../components/MatchSmallCard';
         <h3>{team.teamName}</h3>
         <MatchDetailCard match={team.matches[0]} />
          {
-           team.matches.slice(1).map(match => <MatchSmallCard match ={match}/>)
+           team.matches.slice(1).map((match, index) => <MatchSmallCard match ={match} key={index}/>)
          }
     </div>
   );
