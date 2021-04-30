@@ -4,11 +4,13 @@ import learn.code.ipldashboard.model.Team;
 import learn.code.ipldashboard.repository.MatchRepository;
 import learn.code.ipldashboard.repository.TeamRepository;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@CrossOrigin
 public class TeamController {
 
     private TeamRepository teamRepository;
@@ -28,7 +30,7 @@ public class TeamController {
     @GetMapping("/team/{teamName}")
     public Team getTeamInfo(@PathVariable String teamName) {
         Team team  = this.teamRepository.findByTeamName(teamName);
-        team.setMathes(this.matchRepository.finaLatestMatches(teamName));
+        team.setMatches(this.matchRepository.finaLatestMatches(teamName));
         return team;
     }
 }
