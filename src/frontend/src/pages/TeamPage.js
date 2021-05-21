@@ -10,13 +10,13 @@ import { useParams } from 'react-router-dom';
     const { teamName } = useParams();
 
     useEffect( () => {
-        const fecthMaches = async () => {
+        const fecthMatches = async () => {
             const response = await fetch(`http://localhost:8080/team/${teamName}`);
             const data = await response.json();
             setTeam(data);
             console.log(data);
         }
-        fecthMaches();
+        fecthMatches();
 
     }, [teamName]);
 
