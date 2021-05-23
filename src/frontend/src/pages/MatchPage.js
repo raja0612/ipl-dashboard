@@ -21,8 +21,8 @@ import { useParams } from 'react-router-dom';
 
   return (
     <div className="MatchPage">
-         {
-                    matches.map(match => <MatchDetailCard key={match.id} teamName={teamName} match={match} />)
+        {
+          matches.map(match => <MatchDetailCard key={match.id} teamName={teamName} match={match} />)
         }
     </div>
   );
