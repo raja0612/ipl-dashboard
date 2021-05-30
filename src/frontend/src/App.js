@@ -2,11 +2,11 @@ import './App.scss';
 import { TeamPage } from './pages/TeamPage';
 import { MatchPage } from './pages/MatchPage';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import  { HomePage } from './pages/HomePage';
 
 function App() {
   return (
     <div className="App">
-      <div className="app-name"><h1>IPL Dashboard</h1></div>
       <Router>
         <Switch>
           <Route path="/teams/:teamName/matches/:year">
@@ -14,6 +14,9 @@ function App() {
           </Route>
           <Route path="/teams/:teamName">
             <TeamPage />
+          </Route>
+          <Route path="/">
+            <HomePage />
           </Route>
         </Switch>
       </Router>

@@ -37,8 +37,8 @@ import { PieChart } from 'react-minimal-pie-chart';
          Wins/Losses
        <PieChart
           data={[
-            { title: 'Losses', value: team.totalMatches - team.totalWins, color: '#C13C37' },
-            { title: 'Wins', value: team.totalWins, color: '#E38627' },
+            { title: 'Losses', value: team.totalMatches - team.totalWins, color: '#a34d5d' },
+            { title: 'Wins', value: team.totalWins, color: '#4da375' },
           ]}
         />
        </div>
