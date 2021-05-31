@@ -49,9 +49,9 @@ import { PieChart } from 'react-minimal-pie-chart';
          {
            team.matches.slice(1).map((match, index) => <MatchSmallCard teamName={team.teamName}  match ={match} key={index}/>)
          }
-         <div className="more-link">
-           <a href="#">More ></a>
-         </div>
+       <div className="more-link">
+        <Link to={`/teams/${teamName}/matches/${process.env.REACT_APP_DATA_END_YEAR}`}>More ></Link>
+        </div>
     </div>
   );
 }
