@@ -13,7 +13,7 @@ import { PieChart } from 'react-minimal-pie-chart';
 
     useEffect( () => {
         const fecthMatches = async () => {
-            const response = await fetch(`http://localhost:8080/team/${teamName}`);
+            const response = await fetch(`${process.env.REACT_APP_API_ROOT_URL}/team/${teamName}`);
             const data = await response.json();
             setTeam(data);
             console.log(data);
@@ -31,7 +31,7 @@ import { PieChart } from 'react-minimal-pie-chart';
   return (
     <div className="TeamPage">
        <div className="team-name-section">
-          <h1 className="teamName">{team.teamName}</h1>
+          <h1 className="team-name">{team.teamName}</h1>
        </div>
        <div className="win-loss-section">
          Wins/Losses

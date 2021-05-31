@@ -27,10 +27,6 @@ public class TeamController {
         this.matchRepository = matchRepository;
     }
     
-    @GetMapping("/")
-    public String home() {
-        return "Hello World";
-    }
 
     @GetMapping("/teams")
     public Iterable<Team> getAllTeams() {
